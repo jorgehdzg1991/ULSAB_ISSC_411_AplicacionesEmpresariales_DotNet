@@ -1,6 +1,6 @@
 ﻿using PostsAppAPI.Exceptions;
 using PostsAppAPI.Requests;
-using PostsAppBLL.Managers;
+using PostsAppBLL;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -21,7 +21,7 @@ namespace PostsAppAPI.Controllers
             {
                 var authToken = GetAuthenticationToken();
 
-                var post = PostsManager.CreatePost(request.UsersEmail, request.Title, request.Content, authToken);
+                var post = PostsBL.CreatePost(request.UsersEmail, request.Title, request.Content, authToken);
 
                 return Request.CreateResponse(HttpStatusCode.OK, post);
             }

@@ -51,10 +51,10 @@
     <Compile Include="Exceptions\EmailAlreadyInUseException.cs" />
     <Compile Include="Exceptions\HandleAlreadyInUseException.cs" />
     <Compile Include="Exceptions\WrongEmailOrPasswordException.cs" />
-    <Compile Include="Managers\PostsManager.cs" />
+    <Compile Include="PostsBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Managers\AuthManager.cs" />
-    <Compile Include="Managers\UsersProfileManager.cs" />
+    <Compile Include="AuthenticationBL.cs" />
+    <Compile Include="UserProfilesBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PostsAppDAL\PostsAppDAL.csproj">

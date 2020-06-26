@@ -1,9 +1,9 @@
 ﻿using PostsAppDAL;
 using PostsAppModels.EnrichedEntities;
 
-namespace PostsAppBLL.Managers
+namespace PostsAppBLL
 {
-    public class UsersProfileManager
+    public class UsersProfilesBL
     {
         public static UsersProfile FindUserProfileByHandle(string handle)
         {

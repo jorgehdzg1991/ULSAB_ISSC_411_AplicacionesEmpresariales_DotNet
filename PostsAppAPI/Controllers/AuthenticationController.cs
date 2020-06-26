@@ -1,6 +1,6 @@
 ﻿using PostsAppAPI.Requests;
+using PostsAppBLL;
 using PostsAppBLL.Exceptions;
-using PostsAppBLL.Managers;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -19,7 +19,7 @@ namespace PostsAppAPI.Controllers
         {
             try
             {
-                var session = AuthManager.SignInUser(request.Email, request.Password);
+                var session = AuthenticationBL.SignInUser(request.Email, request.Password);
 
                 return Request.CreateResponse(HttpStatusCode.OK, session);
             }
@@ -39,7 +39,7 @@ namespace PostsAppAPI.Controllers
         {
             try
             {
-                var session = AuthManager.SignUpUser(request.Email, request.Handle, request.DisplayName, request.Password);
+                var session = AuthenticationBL.SignUpUser(request.Email, request.Handle, request.DisplayName, request.Password);
 
                 return Request.CreateResponse(HttpStatusCode.OK, session);
             }

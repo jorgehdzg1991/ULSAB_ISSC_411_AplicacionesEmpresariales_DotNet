@@ -11,9 +11,9 @@ using PostsAppBLL.Exceptions;
 using System.Text;
 using PostsAppDAL.Exceptions;
 
-namespace PostsAppBLL.Managers
+namespace PostsAppBLL
 {
-    public class AuthManager
+    public class AuthenticationBL
     {
         public static readonly string SessionSecretKey = Convert.ToBase64String(Encoding.UTF8.GetBytes(ConfigurationManager.AppSettings["SessionSecretKey"]));
 
